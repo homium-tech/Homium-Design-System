@@ -1,5 +1,11 @@
 # HOMIUM Design System
 
+[![Version](https://img.shields.io/badge/versión-1.0.0-blue.svg)](https://github.com/homium-tech/Homium-Design-System/releases)
+[![License](https://img.shields.io/badge/License-Proprietary%20HOMIUM-red.svg)](https://homium.co)
+[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill%20%2Fhomium--design-blueviolet)](https://claude.ai)
+[![CSS Tokens](https://img.shields.io/badge/CSS-Tokens-blue.svg)](colors_and_type.css)
+[![UI Kit](https://img.shields.io/badge/UI%20Kit-React%2FJSX-61dafb.svg)](ui_kits/marketing-site/)
+
 > **Tecnología sin complicaciones.**
 > Sistema de diseño oficial de HOMIUM — consultora de ecosistemas digitales para empresas en LATAM.
 
