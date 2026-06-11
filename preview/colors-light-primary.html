@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="theme-light"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { background: var(--bg); }
+  .card { padding: 28px; gap: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .sw { display:flex; flex-direction:column; gap:10px; }
+  .chip { height: 84px; border-radius: 14px; position: relative; }
+  .chip.bordered { border: 1px solid var(--border); }
+  .lbl { display:flex; justify-content:space-between; font-size: 12px; }
+  .lbl b { font-weight: 500; color: var(--fg); }
+  .lbl span { font-family: var(--font-mono); color: var(--fg-subtle); }
+  .eye { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-subtle); font-weight: 500; }
+</style></head>
+<body class="theme-light"><div class="card">
+  <div class="eye">Light theme · primary palette</div>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:#4a1170"></div><div class="lbl"><b>Purple 500 — type</b><span>#4A1170</span></div></div>
+    <div class="sw"><div class="chip" style="background:#8e57bf"></div><div class="lbl"><b>Purple 300 — italic</b><span>#8E57BF</span></div></div>
+    <div class="sw"><div class="chip" style="background:#00b8b8"></div><div class="lbl"><b>Cyan 700 — marks</b><span>#00B8B8</span></div></div>
+    <div class="sw"><div class="chip bordered" style="background:#ffffff"></div><div class="lbl"><b>White — bg</b><span>#FFFFFF</span></div></div>
+  </div>
+</div></body></html>

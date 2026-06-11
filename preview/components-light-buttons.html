@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="theme-light"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { background: var(--bg); }
+  .card { padding: 28px; gap: 22px; min-height: 220px; }
+  .row { display:flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .btn { font-family: var(--font-sans); font-size: 14px; font-weight: 500; border-radius: 999px; padding: 12px 22px; border: 1px solid transparent; cursor: pointer; transition: all 140ms var(--ease-out); display: inline-flex; align-items: center; gap: 8px; }
+  .btn.primary { background: var(--homium-cyan); color: var(--homium-purple); }
+  .btn.primary:hover { box-shadow: var(--glow-cyan); transform: scale(1.02); }
+  .btn.secondary { background: transparent; color: var(--fg); border-color: var(--border-strong); }
+  .btn.secondary:hover { background: var(--fg); color: var(--homium-white); border-color: var(--fg); }
+  .btn.tertiary { background: transparent; color: var(--fg); padding: 8px 0; border-radius: 0; }
+  .btn.tertiary:hover { color: var(--purple-300); }
+  .btn.tertiary span.line { border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+  .arrow { font-size: 14px; }
+  .eye { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-subtle); font-weight: 500; }
+</style></head>
+<body class="theme-light"><div class="card">
+  <div class="eye">Buttons · light theme</div>
+  <div class="row">
+    <button class="btn primary">Hablemos <span class="arrow">→</span></button>
+    <button class="btn secondary">Ver todos los proyectos</button>
+    <button class="btn tertiary"><span class="line">Visitar sitio web</span> <span class="arrow">↗</span></button>
+  </div>
+  <div class="row" style="gap: 22px; font-size: 11px; color: var(--fg-subtle); font-family: var(--font-mono);">
+    <span>primary · cyan fill · purple text</span>
+    <span>secondary · purple outline → fill on hover</span>
+    <span>tertiary · underlined link</span>
+  </div>
+</div></body></html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HOMIUM — Tecnología sin complicaciones</title>
+  <link rel="icon" href="../../assets/logo/homium-bolt-white.svg" />
+  <link rel="stylesheet" href="kit.css" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" src="Brackets.jsx"></script>
+  <script type="text/babel" src="Buttons.jsx"></script>
+  <script type="text/babel" src="Layout.jsx"></script>
+  <script type="text/babel" src="Cards.jsx"></script>
+  <script type="text/babel" src="ClientLogos.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="Sections.jsx"></script>
+  <script type="text/babel" src="Contact.jsx"></script>
+
+  <script type="text/babel">
+    const RAIL = [
+      { id: 'inicio',    label: 'Inicio' },
+      { id: 'aliados',   label: 'Aliados' },
+      { id: 'productos', label: 'Productos' },
+      { id: 'gente',     label: 'Gente' },
+      { id: 'servicios', label: 'Servicios' },
+      { id: 'trabajo',   label: 'Trabajo' },
+      { id: 'proceso',   label: 'Proceso' },
+      { id: 'contact',   label: 'Hablemos' },
+    ];
+
+    function App() {
+      const [active, setActive] = React.useState('inicio');
+
+      React.useEffect(() => {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+        }, { rootMargin: '-40% 0px -50% 0px' });
+        RAIL.forEach(it => {
+          const el = document.getElementById(it.id);
+          if (el) obs.observe(el);
+        });
+        return () => obs.disconnect();
+      }, []);
+
+      return (
+        <div className="page">
+          <Header />
+          <LeftRail items={RAIL} active={active} />
+          <div className="container">
+            <Hero />
+            <SomosAliados />
+            <ProductosYGente />
+            <GenteSeria />
+            <ProductosServicios />
+            <ToolsRow />
+            <ProyectosDeExito onSeeAll={() => location.href = 'projects.html'} onOpen={() => location.href = 'detail.html'} />
+            <ComoLoHacemos />
+            <SocialRow />
+            <ContactForm />
+            <Footer />
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+  </script>
+</body>
+</html>

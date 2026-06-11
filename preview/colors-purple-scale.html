@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 24px 28px; gap: 14px; }
+  .title { font-size: 13px; color: var(--fg-muted); }
+  .scale { display: grid; grid-template-columns: repeat(11, 1fr); gap: 4px; }
+  .step { aspect-ratio: 1 / 1.1; border-radius: 8px; position: relative; }
+  .step span { position: absolute; bottom: 4px; left: 6px; font-size: 9px; font-family: var(--font-mono); }
+  .light span { color: rgba(0,0,0,0.7); }
+  .dark span { color: rgba(255,255,255,0.7); }
+  .anchor { outline: 2px solid var(--homium-cyan); outline-offset: -2px; }
+</style></head>
+<body><div class="card">
+  <div class="title">Purple shades — <span class="bracket" style="color:var(--homium-cyan)">functional UI only</span></div>
+  <div class="scale">
+    <div class="step light" style="background:#f1e9f7"><span>50</span></div>
+    <div class="step light" style="background:#d8c2ea"><span>100</span></div>
+    <div class="step light" style="background:#b48cd6"><span>200</span></div>
+    <div class="step dark"  style="background:#8e57bf"><span>300</span></div>
+    <div class="step dark"  style="background:#6a2a9c"><span>400</span></div>
+    <div class="step dark"  style="background:#4a1170"><span>500</span></div>
+    <div class="step dark"  style="background:#380a55"><span>600</span></div>
+    <div class="step dark anchor"  style="background:#290640"><span>700</span></div>
+    <div class="step dark"  style="background:#240537"><span>800</span></div>
+    <div class="step dark"  style="background:#1d042d"><span>900</span></div>
+    <div class="step dark"  style="background:#150220"><span>950</span></div>
+  </div>
+</div></body></html>

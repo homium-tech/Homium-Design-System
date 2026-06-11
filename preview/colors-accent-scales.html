@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 24px 28px; gap: 14px; }
+  .title { font-size: 13px; color: var(--fg-muted); display:flex; justify-content:space-between; }
+  .scale { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+  .step { aspect-ratio: 1 / 0.9; border-radius: 8px; position: relative; }
+  .step span { position: absolute; bottom: 4px; left: 6px; font-size: 9px; font-family: var(--font-mono); color: rgba(0,0,0,0.75); }
+  .anchor { outline: 2px solid var(--homium-purple); outline-offset: -2px; }
+  .grp { display:flex; flex-direction: column; gap: 6px; }
+  .grp .name { font-size: 11px; color: var(--fg-subtle); letter-spacing: 0.06em; text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="grp">
+    <div class="name">Cyan</div>
+    <div class="scale">
+      <div class="step" style="background:#00b8b8"><span>700</span></div>
+      <div class="step" style="background:#00d6d6"><span>600</span></div>
+      <div class="step anchor" style="background:#00ffff"><span>500</span></div>
+      <div class="step" style="background:#5cffff"><span>400</span></div>
+      <div class="step" style="background:#9bffff"><span>300</span></div>
+      <div class="step" style="background:#c4ffff"><span>200</span></div>
+    </div>
+  </div>
+  <div class="grp">
+    <div class="name">Green</div>
+    <div class="scale">
+      <div class="step" style="background:#2bb077"><span>700</span></div>
+      <div class="step" style="background:#3fcc8d"><span>600</span></div>
+      <div class="step anchor" style="background:#5aeaa2"><span>500</span></div>
+      <div class="step" style="background:#8af1bb"><span>400</span></div>
+      <div class="step" style="background:#b5f6d2"><span>300</span></div>
+      <div class="step" style="background:#d8fbe6"><span>200</span></div>
+    </div>
+  </div>
+</div></body></html>

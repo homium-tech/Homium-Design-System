@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 28px; gap: 10px; }
+  .row2 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tok { display:flex; flex-direction:column; gap: 8px; }
+  .sw { height: 56px; border-radius: 10px; border: 1px solid var(--border); }
+  .meta b { font-size: 12px; font-weight: 500; display:block; }
+  .meta span { font-size: 11px; font-family: var(--font-mono); color: var(--fg-subtle); }
+</style></head>
+<body><div class="card">
+  <div class="row2">
+    <div class="tok"><div class="sw" style="background:var(--bg)"></div>
+      <div class="meta"><b>bg</b><span>#290640</span></div></div>
+    <div class="tok"><div class="sw" style="background:var(--bg-elevated)"></div>
+      <div class="meta"><b>bg-elevated</b><span>#380A55</span></div></div>
+    <div class="tok"><div class="sw" style="background:var(--bg-sunken)"></div>
+      <div class="meta"><b>bg-sunken</b><span>#1D042D</span></div></div>
+    <div class="tok"><div class="sw" style="background:var(--surface-cyan)"></div>
+      <div class="meta"><b>surface-cyan</b><span>#00FFFF</span></div></div>
+  </div>
+  <div class="row2" style="margin-top:6px;">
+    <div class="tok"><div class="sw" style="background:#290640; display:flex; align-items:center; justify-content:center; color: var(--fg); font-size: 14px;">Aa</div>
+      <div class="meta"><b>fg</b><span>#FFFFFF</span></div></div>
+    <div class="tok"><div class="sw" style="background:#290640; display:flex; align-items:center; justify-content:center; color: var(--fg-muted); font-size: 14px;">Aa</div>
+      <div class="meta"><b>fg-muted</b><span>rgba(255,255,255,.72)</span></div></div>
+    <div class="tok"><div class="sw" style="background:#290640; display:flex; align-items:center; justify-content:center; color: var(--accent); font-size: 14px;">Aa</div>
+      <div class="meta"><b>accent</b><span>#00FFFF</span></div></div>
+    <div class="tok"><div class="sw" style="background:#290640; display:flex; align-items:center; justify-content:center; color: var(--accent-2); font-size: 14px;">Aa</div>
+      <div class="meta"><b>accent-2</b><span>#5AEAA2</span></div></div>
+  </div>
+</div></body></html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 26px 28px; gap: 16px; }
+  .row { display: grid; grid-template-columns: 1.2fr 1.4fr; gap: 18px; align-items: stretch; }
+  .frame { border-radius: 14px; padding: 22px; display:flex; align-items:center; justify-content:center; min-height: 130px; }
+  .on-purple { background: var(--homium-purple); border: 1px solid var(--border); }
+  .on-cyan   { background: var(--homium-cyan); }
+  .on-white  { background: var(--homium-white); }
+  .frame img.bolt-only  { height: 96px; width: auto; display:block; }
+  .frame img.bolt-small { height: 36px; width: auto; display:block; }
+  .ttl { font-family: var(--font-mono); font-size: 10px; color: var(--fg-subtle); letter-spacing: 0.08em; text-transform: uppercase; }
+  .stack { display:flex; flex-direction:column; gap: 8px; }
+  .triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .triple .frame { min-height: 60px; padding: 12px; }
+  .desc { font-size: 12px; color: var(--fg-muted); line-height: 1.55; margin-top: 4px; }
+</style></head>
+<body><div class="card">
+  <div class="row">
+    <div class="stack">
+      <div class="frame on-purple"><img class="bolt-only" src="../assets/logo/homium-bolt-white.svg" alt="HOMIUM bolt mark" /></div>
+      <div class="ttl">Bolt mark — primary · on purple</div>
+      <div class="desc"><b style="color:var(--fg)">Parens white</b>, bolt keeps the green→cyan gradient. Use as favicon, footer mark, social avatar.</div>
+    </div>
+    <div class="stack">
+      <div class="triple">
+        <div class="frame on-purple"><img class="bolt-small" src="../assets/logo/homium-bolt-white.svg" alt="" /></div>
+        <div class="frame on-cyan"><img class="bolt-small" src="../assets/logo/homium-bolt-purple-mono.svg" alt="" /></div>
+        <div class="frame on-white"><img class="bolt-small" src="../assets/logo/homium-bolt-purple.svg" alt="" /></div>
+      </div>
+      <div class="ttl">Color contexts</div>
+      <div class="desc">On purple → white parens with gradient bolt. <b style="color:var(--fg)">On cyan or green → all-purple mono mark</b> (the gradient bolt would disappear on cyan). On white → purple parens with gradient bolt.</div>
+    </div>
+  </div>
+</div></body></html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 28px; gap: 18px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font: 500 14px var(--font-sans);
+    cursor: pointer; border: 1px solid transparent;
+    transition: all 160ms var(--ease-out);
+  }
+  .primary { background: var(--homium-cyan); color: var(--homium-purple); }
+  .primary.hover { box-shadow: 0 0 24px rgba(0,255,255,0.45); transform: translateY(-1px); }
+  .secondary { background: transparent; color: var(--homium-cyan); border-color: var(--homium-cyan); }
+  .secondary.hover { background: var(--homium-cyan); color: var(--homium-purple); }
+  .green { background: var(--homium-green); color: var(--homium-purple); }
+  .tertiary { background: transparent; color: var(--homium-cyan); padding: 6px 0; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; }
+  .row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; color: var(--fg-subtle); text-transform: uppercase; letter-spacing: 0.08em; min-width: 80px; }
+</style></head>
+<body><div class="card">
+  <div class="row"><div class="lbl">primary</div>
+    <button class="btn primary">Ver todos los proyectos</button>
+    <button class="btn primary hover">Hover →</button>
+  </div>
+  <div class="row"><div class="lbl">secondary</div>
+    <button class="btn secondary">Hablemos</button>
+    <button class="btn secondary hover">Hover</button>
+  </div>
+  <div class="row"><div class="lbl">accent</div>
+    <button class="btn green">Enviar →</button>
+    <button class="btn tertiary">Conoce más →</button>
+  </div>
+</div></body></html>

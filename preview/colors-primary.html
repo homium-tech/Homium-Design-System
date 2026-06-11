@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 28px; gap: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .sw { display:flex; flex-direction:column; gap:10px; }
+  .chip { height: 84px; border-radius: 14px; position: relative; }
+  .chip.bordered { border: 1px solid var(--border); }
+  .lbl { display:flex; justify-content:space-between; font-size: 12px; }
+  .lbl b { font-weight: 500; color: var(--fg); }
+  .lbl span { font-family: var(--font-mono); color: var(--fg-subtle); }
+</style></head>
+<body><div class="card">
+  <div class="grid">
+    <div class="sw"><div class="chip bordered" style="background:#290640"></div><div class="lbl"><b>Purple</b><span>#290640</span></div></div>
+    <div class="sw"><div class="chip" style="background:#00ffff"></div><div class="lbl"><b>Cyan</b><span>#00FFFF</span></div></div>
+    <div class="sw"><div class="chip" style="background:#5aeaa2"></div><div class="lbl"><b>Green</b><span>#5AEAA2</span></div></div>
+    <div class="sw"><div class="chip bordered" style="background:#ffffff"></div><div class="lbl"><b>White</b><span>#FFFFFF</span></div></div>
+  </div>
+</div></body></html>

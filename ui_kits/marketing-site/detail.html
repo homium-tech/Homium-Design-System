@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HOMIUM — Third Way Health</title>
+  <link rel="icon" href="../../assets/logo/homium-bolt-white.svg" />
+  <link rel="stylesheet" href="kit.css" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" src="Brackets.jsx"></script>
+  <script type="text/babel" src="Buttons.jsx"></script>
+  <script type="text/babel" src="Layout.jsx"></script>
+  <script type="text/babel" src="Cards.jsx"></script>
+  <script type="text/babel" src="Contact.jsx"></script>
+
+  <script type="text/babel">
+    function App() {
+      return (
+        <div className="page">
+          <Header />
+          <div className="container">
+            <section style={{ paddingTop: 32 }}>
+              <SectionEyebrow>Nuestro trabajo</SectionEyebrow>
+              <h1 style={{
+                fontFamily: 'var(--font-display)', fontWeight: 300,
+                fontSize: 'clamp(56px, 7vw, 96px)', lineHeight: 1.02,
+                letterSpacing: '-0.02em', margin: '0 0 24px', maxWidth: '14ch'
+              }}>Detalle del<br/>proyecto.</h1>
+
+              <div className="detail-hero" style={{
+                background: 'linear-gradient(135deg, #c5e9d4 0%, #b8d6c0 35%, #a3c4b2 100%)',
+                position: 'relative', overflow: 'hidden'
+              }}>
+                <div style={{
+                  position: 'absolute', inset: 0,
+                  background: "radial-gradient(circle at 25% 60%, rgba(255,255,255,0.6), transparent 40%), radial-gradient(circle at 70% 40%, rgba(190,170,255,0.4), transparent 50%)"
+                }}></div>
+                <div style={{
+                  position: 'absolute', left: '12%', top: '25%',
+                  fontFamily: 'var(--font-sans)', color: '#0e3a2a',
+                  fontWeight: 500, fontSize: 28, letterSpacing: '-0.01em', lineHeight: 1.1
+                }}>
+                  We're revolutionizing<br/>
+                  <em style={{ fontStyle: 'italic', fontWeight: 300 }}>the future of medical</em><br/>
+                  practices.
+                </div>
+              </div>
+
+              <div className="detail-meta-chips">
+                <span className="chip">Procesamiento de datos</span>
+                <span className="chip">Business CMR</span>
+              </div>
+
+              <div className="detail-title-row">
+                <h1>Third Way<br/>Health</h1>
+                <div>
+                  <div className="dashed-circle" style={{ width: 140, height: 140, marginLeft: 'auto', position: 'relative', color: 'var(--homium-cyan)' }}>
+                    <svg viewBox="0 0 100 100" fill="none">
+                      <defs>
+                        <path id="arc-d" d="M 50 50 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0" />
+                      </defs>
+                      <text fill="currentColor" fontSize="6" letterSpacing="3">
+                        <textPath href="#arc-d">VISITAR SITIO WEB · VISITAR SITIO WEB · </textPath>
+                      </text>
+                    </svg>
+                    <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, color: 'var(--homium-cyan)' }}>↗</div>
+                  </div>
+                  <p className="body" style={{ marginTop: 16, color: 'var(--fg-muted)', fontSize: 13, lineHeight: 1.6 }}>
+                    Suspendisse nisi diam, convallis eget erat nec, pellentesque tincidunt mi. Quisque at placerat massa, vel dignissim purus. Maecenas vel orci aliquam, lorem eu lacinia sodales, nulla risus maximus erat, nec volutpat est odio et erat. Integer elit neque, mollis et blandit ac, sagittis sed felis.
+                  </p>
+                </div>
+              </div>
+
+              <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 300, fontSize: 34, color: 'var(--homium-cyan)', margin: '64px 0 24px' }}>Elementos</h2>
+              <div className="detail-elements">
+                <div className="el" style={{ background: 'linear-gradient(135deg, #f6efe2 0%, #e7d9c0 100%)', padding: 22, color: '#3a2a14' }}>
+                  <div style={{ fontSize: 14, fontWeight: 500 }}>Be <em style={{ fontStyle:'italic', fontWeight: 300 }}>the best doctor</em></div>
+                  <div style={{ fontSize: 14, fontWeight: 500 }}>you can be.</div>
+                </div>
+                <div className="el" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #efefe8 100%)', padding: 22, color: '#1a1a1a' }}>
+                  <div style={{ fontSize: 14, fontWeight: 500, marginBottom: 16 }}>Navegación</div>
+                  <div style={{ display: 'flex', gap: 12 }}>
+                    {['Patient app','Contact Center','Virtual'].map(k => (
+                      <div key={k} style={{ background: '#f6f6f3', borderRadius: 8, padding: 16, fontSize: 12, color: '#444', minWidth: 110 }}>
+                        <div style={{ width: 24, height: 24, background: '#e2e8e0', borderRadius: 4, marginBottom: 12 }}></div>
+                        {k}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="detail-elements" style={{ gridTemplateColumns: '1fr 1fr', marginTop: 12 }}>
+                <div className="detail-section-title">Degradados</div>
+                <div className="detail-section-title">Navegación</div>
+              </div>
+
+              <div className="tech-grid">
+                <div>
+                  <h3>Desarrollo front</h3>
+                  <ul>
+                    <li>HTML 5</li>
+                    <li>CSS 3</li>
+                    <li>JQuery</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Desarrollo back</h3>
+                  <p>Desarrollo a la medida con un gestor de contenido propio y lenguajes de programación:</p>
+                  <ul>
+                    <li>Gestor de contenidos Automata V 3.1</li>
+                    <li>PHP V 5.6 o superior</li>
+                    <li>MySql V 5.4</li>
+                    <li>MariaDB V 10.1</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '72px 0 24px' }}>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 300, fontSize: 36, margin: 0 }}>Descubre más proyectos</h2>
+                <PrimaryButton onClick={() => location.href = 'projects.html'}>Ver todos los proyectos →</PrimaryButton>
+              </div>
+              <div className="project-grid">
+                <ProjectCard name="Vitavi" tone="cream" label="Vive la vida como tú quieras." />
+                <ProjectCard name="A Medical Group" tone="mint" label="Your trusted medical provider" />
+              </div>
+            </section>
+            <SocialRow />
+            <ContactForm />
+            <Footer />
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+  </script>
+</body>
+</html>
